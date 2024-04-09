@@ -90,20 +90,23 @@ const data: DataType[] = [
 export function EmblaCarousel() {
   return (
     <>
-      <div className="w-full bg-blue-200">
+      <div className="flex items-center justify-center w-full ">
         <Carousel
           opts={{
             align: "start",
+            direction: "ltr",
+            active: true,
             loop: true,
-            startIndex: 0,
+            dragFree: true,
+            duration: 100,
           }}
-          className="w-full max-w-sm border bg-red-300"
+          className=" w-[80%] "
         >
-          <CarouselContent className="border">
+          <CarouselContent>
             {data.map((dato, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-96">
                 <div className="p-1">
-                  <Card>
+                  <Card className="border ">
                     <CardContent className="flex aspect-square items-center justify-center p-6">
                       <span className="text-3xl font-semibold">
                         {dato.nombre}
