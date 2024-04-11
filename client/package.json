@@ -18,7 +18,9 @@
     "embla-carousel": "^8.0.1",
     "embla-carousel-autoplay": "^8.0.1",
     "embla-carousel-react": "^8.0.1",
+    "formik": "^2.4.5",
     "framer-motion": "^11.0.25",
+    "input-otp": "^1.2.4",
     "lucide-react": "^0.365.0",
     "next": "14.1.4",
     "next-theme": "^0.1.5",
@@ -27,7 +29,8 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",

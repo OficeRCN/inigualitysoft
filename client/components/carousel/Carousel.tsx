@@ -62,7 +62,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/kenatiks/",
     facebook: "https://www.facebook.com/marilu.briones.503/",
     github: "https://github.com/OficeRCN",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
   {
     nombre: "Ruben",
@@ -72,7 +72,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/kenatiks/",
     facebook: "https://www.facebook.com/marilu.briones.503/",
     github: "https://github.com/OficeRCN",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
   {
     nombre: "Ariel",
@@ -82,7 +82,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/kenatiks/",
     facebook: "https://www.facebook.com/marilu.briones.503/",
     github: "https://github.com/OficeRCN",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
   {
     nombre: "Vicente",
@@ -92,7 +92,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/kenatiks/",
     facebook: "",
     github: "https://github.com/OficeRCN",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
   {
     nombre: "Juan",
@@ -102,7 +102,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/kenatiks/",
     facebook: "https://www.facebook.com/marilu.briones.503/",
     github: "https://github.com/OficeRCN",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
   {
     nombre: "Ayrton",
@@ -112,7 +112,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/ayrtondyne/",
     facebook: "",
     github: "",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
   {
     nombre: "Ken",
@@ -122,7 +122,7 @@ const data: DataType[] = [
     instagram: "https://www.instagram.com/kenatiks/",
     facebook: "https://www.facebook.com/marilu.briones.503/",
     github: "https://github.com/OficeRCN",
-    correo: "kenaguirosado@gmail.com",
+    correo: "mailto:kenaguirosado@gmail.com",
   },
 ];
 
