@@ -71,43 +71,44 @@ export function NavigationWrapperComponent() {
                 </motion.div>
               </Link>
             )}
+            {index === 1 && (
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className=" text-sm hover:no-underline p-3">
+                    Servicios
+                  </AccordionTrigger>
+
+                  {NavigationWrapper.map((item, index) => (
+                    <div key={index}>
+                      {Array.isArray(item.path)
+                        ? item.path.map((subPath, subIndex) => (
+                            <AccordionContent>
+                              <motion.div
+                                className="w-full flex gap-3 items-center justify-start text-md  hover:text-white py-1 rounded"
+                                whileHover={{ scale: 1.05 }}
+                              >
+                                <Link
+                                  key={subIndex}
+                                  href={subPath}
+                                  className="w-full "
+                                >
+                                  <div className="w-full flex gap-3 items-center justify-start hover:bg-blue-500 hover:text-white p-3 rounded indent-5">
+                                    {Array.isArray(item.itemName)
+                                      ? item.itemName[subIndex]
+                                      : item.itemName}
+                                  </div>
+                                </Link>
+                              </motion.div>
+                            </AccordionContent>
+                          ))
+                        : ""}
+                    </div>
+                  ))}
+                </AccordionItem>
+              </Accordion>
+            )}
           </div>
         ))}
-
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className=" text-sm hover:no-underline">
-              Servicios
-            </AccordionTrigger>
-
-            {NavigationWrapper.map((item, index) => (
-              <div key={index}>
-                {Array.isArray(item.path)
-                  ? item.path.map((subPath, subIndex) => (
-                      <AccordionContent>
-                        <motion.div
-                          className="w-full flex gap-3 items-center justify-start text-md  hover:text-white py-1 rounded"
-                          whileHover={{ scale: 1.05 }}
-                        >
-                          <Link
-                            key={subIndex}
-                            href={subPath}
-                            className="w-full "
-                          >
-                            <div className="w-full flex gap-3 items-center justify-center hover:bg-blue-500 hover:text-white p-3 rounded">
-                              {Array.isArray(item.itemName)
-                                ? item.itemName[subIndex]
-                                : item.itemName}
-                            </div>
-                          </Link>
-                        </motion.div>
-                      </AccordionContent>
-                    ))
-                  : ""}
-              </div>
-            ))}
-          </AccordionItem>
-        </Accordion>
       </SheetContent>
     </Sheet>
   );
