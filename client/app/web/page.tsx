@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
-export default function Webs(){
-    return(
-        <>
-            <h1>Hola webs</h1>
-        </>
-    )
+export default function Webs() {
+  return (
+    <>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit molestias,
+      iure voluptates quae quod, ducimus quas recusandae fuga, necessitatibus
+      eveniet ad modi amet doloremque provident veniam suscipit dignissimos.
+      Pariatur, delectus.
+    </>
+  );
 }

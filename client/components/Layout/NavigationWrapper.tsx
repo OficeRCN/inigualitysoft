@@ -1,6 +1,3 @@
-// BUTTON
-import { Button } from "@/components/ui/button";
-
 // WRAPpER
 import {
   Sheet,
@@ -21,15 +18,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// SELECT
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
 // MOTION
 import { motion } from "framer-motion";
 
@@ -41,7 +29,6 @@ import { NavigationWrapper } from "../configs/navigation";
 
 // ICONS
 import { AlignJustify } from "lucide-react";
-import { X } from "lucide-react";
 
 export function NavigationWrapperComponent() {
   return (
@@ -62,7 +49,7 @@ export function NavigationWrapperComponent() {
             {Array.isArray(item.path) ? (
               ""
             ) : (
-              <Link key={index} href={item.path}>
+              <Link key={item.path} href={item.path}>
                 <motion.div
                   className="w-full flex gap-3 items-center justify-start text-sm hover:bg-blue-500 hover:text-white p-3 rounded"
                   whileHover={{ scale: 1.05 }}
@@ -79,16 +66,18 @@ export function NavigationWrapperComponent() {
                   </AccordionTrigger>
 
                   {NavigationWrapper.map((item, index) => (
-                    <div key={index}>
+                    <div key={`accordion-item-${index}`}>
                       {Array.isArray(item.path)
                         ? item.path.map((subPath, subIndex) => (
-                            <AccordionContent>
+                            <AccordionContent
+                              key={`accordion-content-${index}-${subIndex}`}
+                            >
                               <motion.div
                                 className="w-full flex gap-3 items-center justify-start text-md  hover:text-white py-1 rounded"
                                 whileHover={{ scale: 1.05 }}
                               >
                                 <Link
-                                  key={subIndex}
+                                  key={subPath}
                                   href={subPath}
                                   className="w-full "
                                 >

@@ -67,3 +67,11 @@ export const contactSchema = Yup.object({
         .min(10, "Message must have more than 10 characters.")
         .max(80, "Message must have not more than 25 characters.")
 })
+
+export const filterSchema = Yup.object({
+    finalValue: Yup.string()
+        .required("You need to set a value to filter")
+        .test("is-not-zero", "The value cannot be 0", (value) => {
+            return +value !== 0;
+        })
+});
