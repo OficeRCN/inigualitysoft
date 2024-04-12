@@ -48,3 +48,22 @@ export const resetPassword = Yup.object({
         .oneOf([Yup.ref('password')], 'Passwords does not match, please try again.')
         .required("Password required.").min(6, "Must be at least 6 characters.").max(12, "Password would not be more than 12 characters."),
 });
+
+export const contactSchema = Yup.object({
+    correo: Yup.string()
+        .required("Email is required")
+        .test("has-a-valid-domain", "Domain is not supported", (value) => {
+            if (!value) return false;
+
+            const validateDomains = ["gmail.com", "hotmail.com", "outlook.com", "yahoo.com"];
+
+            const domain = value.split("@")[1];
+
+            return validateDomains.includes(domain);
+
+        }),
+    message: Yup.string()
+        .required("Type a message to send")
+        .min(10, "Message must have more than 10 characters.")
+        .max(80, "Message must have not more than 25 characters.")
+})

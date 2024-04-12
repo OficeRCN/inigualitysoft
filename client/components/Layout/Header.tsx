@@ -2,6 +2,7 @@
 
 // NAVIGATION
 import { NavigationMenuComponent } from "./NavigationMenu";
+import { NavigationWrapperComponent } from "./NavigationWrapper";
 
 // THEME
 import { ModeToggle } from "./ToogleTheme";
@@ -19,10 +20,11 @@ export default function Header() {
           height={10}
           alt="LOGO"
         />
-        <div>
-          <NavigationMenuComponent />
+        <NavigationMenuComponent />
+        <div className="flex md:gap-3">
+          <ModeToggle />
+          <NavigationWrapperComponent />
         </div>
-        <ModeToggle />
       </header>
     </>
   );
