@@ -14,7 +14,7 @@ export default function Layout({
         <div className="w-full">
           <SearchWeb />
         </div>
-        <div className="flex flex-col md:flex-col lg-flex-row gap-8 overflow-auto">
+        <div className="flex flex-col md:flex-col lg:flex-row gap-8 overflow-auto">
           <div className="lg:w-[25%]">
             {" "}
             <SidebarWeb />
